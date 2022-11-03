@@ -1,0 +1,19 @@
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(19, 17, 17);
+}
+.titulo {
+  color: azure;
+}
+.items {
+  list-style-type: none;
+  display: flex;
+
+  margin-left: 20rem;
+}
+.menu_list {
+  list-style-type: none;
+  margin-left: 10px;
+  color: beige;
+}
