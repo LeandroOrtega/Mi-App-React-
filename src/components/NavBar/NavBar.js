@@ -1,5 +1,6 @@
 import React from "react";
-import CartWidget from "../CartWidget/CartWidget";
+import { Link } from "react-router-dom";
+// import CartWidget from "../CartWidget/CartWidget";
 import "./NavBar.css";
 const NavBar = () => {
   return (
@@ -7,32 +8,24 @@ const NavBar = () => {
       <h2 className="titulo"> La Casa De River Plate</h2>
       <ul className="items">
         <li>
-          <a href="" className="menu_list">
-            Inicio
-          </a>
+          <Link to="/">Inicio</Link>
         </li>
         <li>
-          <a href="" className="menu_list">
-            Niños
-          </a>
+          <Link to="/category/niños">Niños</Link>
         </li>
         <li>
-          <a href="" className="menu_list">
-            Damas
-          </a>
+          <Link to="/category/damas">Damas</Link>
         </li>
         <li>
-          <a href="" className="menu_list">
-            Hombres
-          </a>
+          <Link to="/category/hombres">Hombres</Link>
         </li>
         <li>
-          <a href="" className="menu_list">
-            Tarjeta River Plate
-          </a>
+          <Link to="/">Tarjeta River Plate</Link>
         </li>
       </ul>
-      <CartWidget />
+      <div>
+        <Link to="/CartWidget"> Carrito</Link>
+      </div>
     </div>
   );
 };
