@@ -1,13 +1,8 @@
-import { Link } from "react-router-dom";
+import Item from "./Item";
 
-const ItemList = ({ producto }) => {
-  return (
-    <Link to={`detail/${producto.id} `}>
-      <div>
-        <h2>{producto.nombre}</h2>
-        <h3>{producto.categoria}</h3>
-      </div>
-    </Link>
-  );
+const ItemList = ({ productos }) => {
+  return productos.map((producto) => (
+    <Item producto={producto} key={producto.id} />
+  ));
 };
 export default ItemList;
