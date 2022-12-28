@@ -3,6 +3,9 @@ import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailCont
 import NavBar from "./components/NavBar/NavBar";
 import ItemsListContainer from "./components/ItemsListContainer/ItemsListContainer";
 
+import ItemList from "./components/item/ItemList";
+import CartWidget from "./components/CartWidget/CartWidget";
+
 // import CartWidget from "./components/CartWidget/CartWidget";
 function App() {
   return (
@@ -10,7 +13,9 @@ function App() {
       <NavBar />
       <Routes>
         <Route path="/" element={<ItemsListContainer />} />
-        <Route path="detail/:id" element={<ItemDetailContainer />} />
+        <Route path="detail/:id" element={<ItemList />} />
+        <Route path="category/:categoryName" element={<ItemsListContainer />} />
+        <Route path="carrito" element={<CartWidget />} />
       </Routes>
     </BrowserRouter>
   );

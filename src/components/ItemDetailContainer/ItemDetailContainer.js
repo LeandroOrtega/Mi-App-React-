@@ -1,7 +1,11 @@
 import { doc, getDoc, getFirestore } from "firebase/firestore";
-import ItemList from "../item/ItemList";
+import Item from "../item/ItemList";
 const ItemDetailContainer = () => {
-  return <div></div>;
+  return (
+    <div>
+      <Item />
+    </div>
+  );
 };
 
 export default ItemDetailContainer;

@@ -1,5 +1,4 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import CartWidget from "../CartWidget/CartWidget";
 import "./NavBar.css";
 const NavBar = () => {
@@ -8,23 +7,34 @@ const NavBar = () => {
       <h2 className="titulo"> La Casa De River Plate</h2>
       <ul className="items">
         <li>
-          <Link to="/">Inicio</Link>
+          <NavLink to="/">Inicio</NavLink>
         </li>
         <li>
-          <Link to="/category/niños">Niños</Link>
+          <NavLink to="/category/niños" activeClassName="active">
+            Niños
+          </NavLink>
         </li>
         <li>
-          <Link to="/category/damas">Damas</Link>
+          <NavLink to="/category/damas" activeClassName="active">
+            Damas
+          </NavLink>
         </li>
         <li>
-          <Link to="/category/hombres">Hombres</Link>
+          <NavLink to="/category/hombres" activeClassName="active">
+            Hombres
+          </NavLink>
         </li>
         <li>
-          <Link to="/">Tarjeta River Plate</Link>
+          <NavLink to="/" activeClassName="active">
+            Tarjeta River Plate
+          </NavLink>
         </li>
       </ul>
       <div>
-        <Link to="/CartWidget"> {<CartWidget />}</Link>
+        <NavLink to="/carrito" activeClassName="active">
+          {" "}
+          {<CartWidget />}
+        </NavLink>
       </div>
     </div>
   );
